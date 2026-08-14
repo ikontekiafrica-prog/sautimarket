@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Sauti.Market - Sound, Sight, and Soul</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom Fonts from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@400;600&display=swap');
+        
+        .font-header {
+            font-family: 'Oswald', sans-serif;
+        }
+        .font-body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Custom Colors defined in the brand kit */
+        :root {
+            --color-indigo: #0D1B2A;
+            --color-yellow: #F4A300;
+            --color-white: #FFFFFF;
+            --color-gray: #EAEAEA;
+            --color-orange: #F46E00;
+        }
+        
+        .bg-indigo { background-color: var(--color-indigo); }
+        .bg-yellow { background-color: var(--color-yellow); }
+        .text-yellow { color: var(--color-yellow); }
+        .text-orange { color: var(--color-orange); }
+        .bg-gray { background-color: var(--color-gray); }
+        .bg-orange { background-color: var(--color-orange); }
+        .border-yellow { border-color: var(--color-yellow); }
+
+        /* Custom image styling */
+        .gallery-image {
+            width: 80%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body class="font-body bg-gray text-gray-800">
+
+    <header class="bg-indigo text-white py-4 px-8 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="font-header text-3xl font-bold text-yellow uppercase">Sauti.Market</a>
+            
+            <nav id="nav-menu" class="hidden md:flex flex-col md:flex-row items-center w-full md:w-auto mt-4 md:mt-0 space-y-4 md:space-y-0 text-center">
+                <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 w-full md:w-auto">
+                    <li><a href="index.html" class="text-white hover:text-yellow transition-colors" id="nav-home">Home</a></li>
+                    <li><a href="magazine.html" class="text-white hover:text-yellow transition-colors" id="nav-magazine">Magazine</a></li>
+                    <li><a href="#" class="text-white hover:text-yellow transition-colors font-bold" id="nav-gallery">Gallery</a></li>
+                    <li><a href="contact.html" class="text-white hover:text-yellow transition-colors" id="nav-contact">Contact Us</a></li>
+                </ul>
+                <div class="lang-switcher ml-0 md:ml-4 mt-4 md:mt-0 border-t md:border-t-0 pt-4 md:pt-0 border-yellow-800">
+                    <button id="lang-en" class="font-bold text-yellow hover:text-white transition-colors" onclick="setLanguage('en')">EN</button>
+                    <span class="text-white">|</span>
+                    <button id="lang-sw" class="font-bold text-white hover:text-yellow transition-colors" onclick="setLanguage('sw')">SW</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-16 px-4">
+        <div class="container mx-auto max-w-7xl">
+            <h1 class="font-header text-5xl md:text-6xl text-indigo text-center font-bold mb-12" id="gallery-title">
+                Sound, Sight, and Soul
+            </h1>
+            <p class="text-center text-lg max-w-2xl mx-auto mb-16" id="gallery-subtitle">
+                Experience the raw talent and creativity of our youth. Dive into photoshoots, performances, and behind-the-scenes content.
+            </p>
+
+            <div id="gallery-content" class="space-y-12">
+                <img src="images/29.jpg" alt="Contestant at an event" class="gallery-image h-auto rounded-lg shadow-md transform transition-transform hover:scale-105 duration-300">
+                <img src="images/31.jpg" alt="Behind-the-scenes photo" class="gallery-image h-auto rounded-lg shadow-md transform transition-transform hover:scale-105 duration-300">
+                <img src="images/35.jpg" alt="Group photoshoot" class="gallery-image h-auto rounded-lg shadow-md transform transition-transform hover:scale-105 duration-300">
+                <img src="images/17.jpg" alt="Performance shot" class="gallery-image h-auto rounded-lg shadow-md transform transition-transform hover:scale-105 duration-300">
+                <img src="images/16.jpg" alt="Another behind-the-scenes photo" class="gallery-image h-auto rounded-lg shadow-md transform transition-transform hover:scale-105 duration-300">
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="https://drive.google.com/drive/folders/your-drive-folder-link" target="_blank" class="inline-block bg-orange text-white font-bold text-lg px-8 py-4 rounded-full transition-transform transform hover:scale-105 duration-300 shadow-lg">
+                    See More Photos
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-indigo text-white py-12 text-center mt-16">
+        <p class="font-body text-sm" id="footer-text">&copy; 2025 Sauti.Market. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                pageTitle: "Sauti.Market - Sound, Sight, and Soul",
+                navHome: "Home",
+                navMagazine: "Magazine",
+                navGallery: "Gallery",
+                navContact: "Contact Us",
+                galleryTitle: "Sound, Sight, and Soul",
+                gallerySubtitle: "Experience the raw talent and creativity of our youth. Dive into photoshoots, performances, and behind-the-scenes content.",
+                footerText: "&copy; 2025 Sauti.Market. All rights reserved."
+            },
+            sw: {
+                pageTitle: "Sauti.Market - Sauti, Taswira, na Roho",
+                navHome: "Nyumbani",
+                navMagazine: "Jarida",
+                navGallery: "Matunzio",
+                navContact: "Wasiliana Nasi",
+                galleryTitle: "Sauti, Taswira, na Roho",
+                gallerySubtitle: "Jijumuishe katika talanta halisi na ubunifu wa vijana wetu. Jijenge katika upigaji picha, maonyesho, na maudhui ya nyuma ya pazia.",
+                footerText: "&copy; 2025 Sauti.Market. Haki zote zimehifadhiwa."
+            }
+        };
+
+        const languageButtons = document.querySelectorAll('#lang-en, #lang-sw');
+
+        function setLanguage(lang) {
+            document.getElementById('page-title').innerText = translations[lang].pageTitle;
+            document.getElementById('nav-home').innerText = translations[lang].navHome;
+            document.getElementById('nav-magazine').innerText = translations[lang].navMagazine;
+            document.getElementById('nav-gallery').innerText = translations[lang].navGallery;
+            document.getElementById('nav-contact').innerText = translations[lang].navContact;
+            document.getElementById('gallery-title').innerText = translations[lang].galleryTitle;
+            document.getElementById('gallery-subtitle').innerText = translations[lang].gallerySubtitle;
+            document.getElementById('footer-text').innerHTML = translations[lang].footerText;
+            
+            // Update button styles
+            languageButtons.forEach(button => {
+                button.classList.remove('text-yellow', 'text-white');
+                if (button.id === `lang-${lang}`) {
+                    button.classList.add('text-yellow');
+                } else {
+                    button.classList.add('text-white');
+                }
+            });
+        }
+        
+        // Set default language on page load
+        setLanguage('en');
+    </script>
+</body>
+</html>

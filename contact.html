@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Sauti.Market - Contact & Join Us</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom Fonts from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@400;600&display=swap');
+        
+        .font-header {
+            font-family: 'Oswald', sans-serif;
+        }
+        .font-body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Custom Colors defined in the brand kit */
+        :root {
+            --color-indigo: #0D1B2A;
+            --color-yellow: #F4A300;
+            --color-white: #FFFFFF;
+            --color-gray: #EAEAEA;
+            --color-orange: #F46E00;
+        }
+        
+        .bg-indigo { background-color: var(--color-indigo); }
+        .bg-yellow { background-color: var(--color-yellow); }
+        .text-yellow { color: var(--color-yellow); }
+        .text-orange { color: var(--color-orange); }
+        .bg-gray { background-color: var(--color-gray); }
+        .bg-orange { background-color: var(--color-orange); }
+        .border-yellow { border-color: var(--color-yellow); }
+    </style>
+</head>
+<body class="font-body bg-gray text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-indigo text-white py-4 px-8 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="font-header text-3xl font-bold text-yellow uppercase">Sauti.Market</a>
+            
+            <!-- Navigation Menu - Hidden by default on mobile, flex on medium screens and up -->
+            <nav id="nav-menu" class="hidden md:flex flex-col md:flex-row items-center w-full md:w-auto mt-4 md:mt-0 space-y-4 md:space-y-0 text-center">
+                <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 w-full md:w-auto">
+                    <li><a href="index.html" class="text-white hover:text-yellow transition-colors" id="nav-home">Home</a></li>
+                    <li><a href="magazine.html" class="text-white hover:text-yellow transition-colors" id="nav-magazine">Magazine</a></li>
+                    <li><a href="gallery.html" class="text-white hover:text-yellow transition-colors" id="nav-gallery">Gallery</a></li>
+                    <li><a href="#" class="text-white hover:text-yellow transition-colors font-bold" id="nav-contact">Contact Us</a></li>
+                </ul>
+                <!-- Language Switcher -->
+                <div class="lang-switcher ml-0 md:ml-4 mt-4 md:mt-0 border-t md:border-t-0 pt-4 md:pt-0 border-yellow-800">
+                    <button id="lang-en" class="font-bold text-yellow hover:text-white transition-colors" onclick="setLanguage('en')">EN</button>
+                    <span class="text-white">|</span>
+                    <button id="lang-sw" class="font-bold text-white hover:text-yellow transition-colors" onclick="setLanguage('sw')">SW</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <main class="py-16 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <h1 class="font-header text-5xl md:text-6xl text-indigo text-center font-bold mb-4" id="main-heading">
+                Let's Build Together.
+            </h1>
+            <p class="text-center text-lg max-w-2xl mx-auto mb-12" id="main-subtitle">
+                Whether you're a youth with a question, a potential partner, or a supporter, we want to hear from you.
+            </p>
+
+            <div class="bg-white rounded-xl shadow-lg p-8 md:p-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Join Us/Info Section -->
+                    <div class="space-y-8">
+                        <div>
+                            <h2 class="font-header text-3xl font-bold text-indigo mb-4" id="contact-details-heading">Contact Details</h2>
+                            <div class="flex items-center space-x-4 mb-2">
+                                <i class="fas fa-phone text-yellow text-xl"></i>
+                                <a href="tel:+255123456789" class="text-gray-700 hover:text-yellow transition-colors">+255 749 682 106</a>
+                            </div>
+                            <div class="flex items-center space-x-4 mb-2">
+                                <i class="fas fa-envelope text-yellow text-xl"></i>
+                                <a href="mailto:info@sautimarket.busteki.co.tz" class="text-gray-700 hover:text-yellow transition-colors">info@sautimarket.busteki.co.tz</a>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-map-marker-alt text-yellow text-xl"></i>
+                                <p class="text-gray-700" id="contact-address">P.O Box 2798, IAA Business Startup Center, Arusha</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="font-header text-3xl font-bold text-indigo mb-4" id="follow-us-heading">Follow Us</h2>
+                            <div class="flex space-x-6">
+                                <a href="#" class="text-gray-500 hover:text-yellow transition-colors text-3xl">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://www.instagram.com/sauti.market/" class="text-gray-500 hover:text-yellow transition-colors text-3xl">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/jastin-maile-a31345244/" class="text-gray-500 hover:text-yellow transition-colors text-3xl">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="font-header text-3xl font-bold text-indigo mb-4" id="partner-heading">Partner with Us</h2>
+                            <p class="text-gray-700" id="partner-text">
+                                We are always looking for partners and sponsors who believe in the power of youth. If your organization is interested in supporting Sauti.Market, let's connect.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer placeholder -->
+    <footer class="bg-indigo text-white py-12 text-center mt-16">
+        <p class="font-body text-sm" id="footer-text">&copy; 2025 Sauti.Market. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                pageTitle: "Sauti.Market - Contact & Join Us",
+                navHome: "Home",
+                navMagazine: "Magazine",
+                navGallery: "Gallery",
+                navContact: "Contact Us",
+                mainHeading: "Let's Build Together.",
+                mainSubtitle: "Whether you're a youth with a question, a potential partner, or a supporter, we want to hear from you.",
+                formHeading: "Send Us a Message",
+                labelName: "Full Name",
+                labelEmail: "Email Address",
+                labelSubject: "Subject",
+                labelMessage: "Your Message",
+                formButton: "Send Message",
+                contactDetailsHeading: "Contact Details",
+                contactAddress: "P.O Box 1234, Dar es Salaam, Tanzania",
+                followUsHeading: "Follow Us",
+                partnerHeading: "Partner with Us",
+                partnerText: "We are always looking for partners and sponsors who believe in the power of youth. If your organization is interested in supporting Sauti.Market, let's connect.",
+                footerText: "&copy; 2025 Sauti.Market. All rights reserved."
+            },
+            sw: {
+                pageTitle: "Sauti.Market - Wasiliana Nasi",
+                navHome: "Nyumbani",
+                navMagazine: "Jarida",
+                navGallery: "Matunzio",
+                navContact: "Wasiliana Nasi",
+                mainHeading: "Tujenge Pamoja.",
+                mainSubtitle: "Iwe wewe ni kijana mwenye swali, mshirika anayewezekana, au msaidizi, tunataka kusikia kutoka kwako.",
+                formHeading: "Tutumie Ujumbe",
+                labelName: "Jina Kamili",
+                labelEmail: "Anwani ya Barua pepe",
+                labelSubject: "Mada",
+                labelMessage: "Ujumbe Wako",
+                formButton: "Tuma Ujumbe",
+                contactDetailsHeading: "Maelezo ya Mawasiliano",
+                contactAddress: "Sanduku la Posta 1234, Dar es Salaam, Tanzania",
+                followUsHeading: "Tufuate",
+                partnerHeading: "Shirikiana Nasi",
+                partnerText: "Daima tunatafuta washirika na wafadhili wanaoamini katika nguvu ya vijana. Ikiwa shirika lako linapenda kusaidia Sauti.Market, tuungane.",
+                footerText: "&copy; 2025 Sauti.Market. Haki zote zimehifadhiwa."
+            }
+        };
+
+        const languageButtons = document.querySelectorAll('#lang-en, #lang-sw');
+        
+        function setLanguage(lang) {
+            document.getElementById('page-title').innerText = translations[lang].pageTitle;
+            document.getElementById('nav-home').innerText = translations[lang].navHome;
+            document.getElementById('nav-magazine').innerText = translations[lang].navMagazine;
+            document.getElementById('nav-gallery').innerText = translations[lang].navGallery;
+            document.getElementById('nav-contact').innerText = translations[lang].navContact;
+            document.getElementById('main-heading').innerText = translations[lang].mainHeading;
+            document.getElementById('main-subtitle').innerText = translations[lang].mainSubtitle;
+            document.getElementById('form-heading').innerText = translations[lang].formHeading;
+            document.getElementById('label-name').innerText = translations[lang].labelName;
+            document.getElementById('label-email').innerText = translations[lang].labelEmail;
+            document.getElementById('label-subject').innerText = translations[lang].labelSubject;
+            document.getElementById('label-message').innerText = translations[lang].labelMessage;
+            document.getElementById('form-button').innerText = translations[lang].formButton;
+            document.getElementById('contact-details-heading').innerText = translations[lang].contactDetailsHeading;
+            document.getElementById('contact-address').innerText = translations[lang].contactAddress;
+            document.getElementById('follow-us-heading').innerText = translations[lang].followUsHeading;
+            document.getElementById('partner-heading').innerText = translations[lang].partnerHeading;
+            document.getElementById('partner-text').innerText = translations[lang].partnerText;
+            document.getElementById('footer-text').innerHTML = translations[lang].footerText;
+
+            // Update button styles
+            languageButtons.forEach(button => {
+                button.classList.remove('text-yellow', 'text-white');
+                if (button.id === `lang-${lang}`) {
+                    button.classList.add('text-yellow');
+                } else {
+                    button.classList.add('text-white');
+                }
+            });
+        }
+        
+        // Set default language on page load
+        setLanguage('en');
+    </script>
+</body>
+</html>

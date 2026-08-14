@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Article: Empowered Voices - Sauti.Market</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom Fonts from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@400;600&display=swap');
+        
+        .font-header {
+            font-family: 'Oswald', sans-serif;
+        }
+        .font-body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Custom Colors defined in the brand kit */
+        :root {
+            --color-indigo: #0D1B2A;
+            --color-yellow: #F4A300;
+            --color-white: #FFFFFF;
+            --color-gray: #EAEAEA;
+            --color-orange: #F46E00;
+        }
+        
+        .bg-indigo { background-color: var(--color-indigo); }
+        .bg-yellow { background-color: var(--color-yellow); }
+        .text-yellow { color: var(--color-yellow); }
+        .text-orange { color: var(--color-orange); }
+        .bg-gray { background-color: var(--color-gray); }
+        .bg-orange { background-color: var(--color-orange); }
+        .border-yellow { border-color: var(--color-yellow); }
+
+        /* A simple prose class for better readability within the article content */
+        .prose p {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="font-body bg-gray text-gray-800">
+
+    <header class="bg-indigo text-white py-4 px-8 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="font-header text-3xl font-bold text-yellow uppercase">Sauti.Market</a>
+            
+            <nav id="nav-menu" class="hidden md:flex flex-col md:flex-row items-center w-full md:w-auto mt-4 md:mt-0 space-y-4 md:space-y-0 text-center">
+                <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 w-full md:w-auto">
+                    <li><a href="#" class="text-white hover:text-yellow transition-colors font-bold" id="nav-home">Home</a></li>
+                    <li><a href="magazine.html" class="text-white hover:text-yellow transition-colors" id="nav-magazine">Magazine</a></li>
+                    <li><a href="gallery.html" class="text-white hover:text-yellow transition-colors" id="nav-gallery">Gallery</a></li>
+                    <li><a href="contact.html" class="text-white hover:text-yellow transition-colors" id="nav-contact">Contact Us</a></li>
+                </ul>
+                <div class="lang-switcher ml-0 md:ml-4 mt-4 md:mt-0 border-t md:border-t-0 pt-4 md:pt-0 border-yellow-800">
+                    <button id="lang-en" class="font-bold text-yellow hover:text-white transition-colors" onclick="setLanguage('en')">EN</button>
+                    <span class="text-white">|</span>
+                    <button id="lang-sw" class="font-bold text-white hover:text-yellow transition-colors" onclick="setLanguage('sw')">SW</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-16 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <img src="images/11.jpg" alt="Students in a classroom" class="w-full h-96 object-cover rounded-xl shadow-lg mb-8">
+            
+            <div class="bg-white rounded-xl shadow-lg p-8 md:p-12">
+                <span class="inline-block text-orange text-sm font-bold mb-2" id="article-tag">
+                    Student Voices
+                </span>
+                <h1 class="font-header text-4xl md:text-5xl font-bold text-indigo leading-tight" id="article-title">
+                    Empowered Voices: Students Celebrate Their Platform
+                </h1>
+                <p class="text-gray-500 mt-2 text-lg" id="article-meta">
+                    By The Sauti.Market Team | Published on July 18, 2025
+                </p>
+
+                <div class="mt-8 prose max-w-none">
+                    <p id="paragraph-1">
+                        The students who participated in the Sauti.Market program are filled with pride and gratitude. For many, it's the first time their voices have been truly heard and valued. The platform has given them the confidence to speak up, share their stories, and know that their perspectives matter.
+                    </p>
+
+                    <h2 class="font-header text-3xl font-bold text-indigo mt-10" id="heading-1">A Platform That Recognizes Value</h2>
+                    <p id="paragraph-2">
+                        Sauti.Market is more than just a project—it's a movement that recognizes the golden value of youth voices. Students appreciate how the platform not only listens to them but also empowers them to become leaders and changemakers in their communities. They feel seen, respected, and motivated to make a difference.
+                    </p>
+
+                    <h2 class="font-header text-3xl font-bold text-indigo mt-10" id="heading-2">Empowerment and Appreciation</h2>
+                    <p id="paragraph-3">
+                        Through workshops, radio shows, and community engagement, students have discovered new strengths within themselves. They're grateful for the opportunities to express their ideas and to be part of something bigger. The sense of empowerment has inspired them to dream bigger and support one another.
+                    </p>
+
+                    <blockquote class="border-l-4 border-yellow pl-4 text-xl italic my-8" id="blockquote">
+                        "We are proud to be part of Sauti.Market. This platform believes in us and gives us the courage to use our voices for good. We feel appreciated and empowered to create change." - A student participant
+                    </blockquote>
+
+                    <h2 class="font-header text-3xl font-bold text-indigo mt-10" id="heading-3">Looking Forward</h2>
+                    <p id="paragraph-4">
+                        The appreciation students have for Sauti.Market is matched only by their excitement for the future. They are eager to continue using their voices, knowing they have a platform that supports and uplifts them. Together, they're building a legacy of empowered youth who recognize the value of their own stories.
+                    </p>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="magazine.html" class="inline-block bg-indigo text-white font-bold text-lg px-8 py-4 rounded-full transition-transform transform hover:scale-105" id="back-link">
+                        &larr; Back to Magazine
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-indigo text-white py-12 text-center mt-16">
+        <p class="font-body text-sm" id="footer-text">&copy; 2025 Sauti.Market. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                pageTitle: "Article: Empowered Voices - Sauti.Market",
+                navHome: "Home",
+                navMagazine: "Magazine",
+                navGallery: "Gallery",
+                navContact: "Contact Us",
+                articleTag: "Student Voices",
+                articleTitle: "Empowered Voices: Students Celebrate Their Platform",
+                articleMeta: "By The Sauti.Market Team | Published on July 18, 2025",
+                paragraph1: "The students who participated in the Sauti.Market program are filled with pride and gratitude. For many, it's the first time their voices have been truly heard and valued. The platform has given them the confidence to speak up, share their stories, and know that their perspectives matter.",
+                heading1: "A Platform That Recognizes Value",
+                paragraph2: "Sauti.Market is more than just a project—it's a movement that recognizes the golden value of youth voices. Students appreciate how the platform not only listens to them but also empowers them to become leaders and changemakers in their communities. They feel seen, respected, and motivated to make a difference.",
+                heading2: "Empowerment and Appreciation",
+                paragraph3: "Through workshops, radio shows, and community engagement, students have discovered new strengths within themselves. They're grateful for the opportunities to express their ideas and to be part of something bigger. The sense of empowerment has inspired them to dream bigger and support one another.",
+                blockquote: "\"We are proud to be part of Sauti.Market. This platform believes in us and gives us the courage to use our voices for good. We feel appreciated and empowered to create change.\" - A student participant",
+                heading3: "Looking Forward",
+                paragraph4: "The appreciation students have for Sauti.Market is matched only by their excitement for the future. They are eager to continue using their voices, knowing they have a platform that supports and uplifts them. Together, they're building a legacy of empowered youth who recognize the value of their own stories.",
+                backLink: "&larr; Back to Magazine",
+                footerText: "&copy; 2025 Sauti.Market. All rights reserved."
+            },
+            sw: {
+                pageTitle: "Makala: Sauti Zilizowezeshwa - Sauti.Market",
+                navHome: "Nyumbani",
+                navMagazine: "Jarida",
+                navGallery: "Matunzio",
+                navContact: "Wasiliana Nasi",
+                articleTag: "Sauti za Wanafunzi",
+                articleTitle: "Sauti Zilizowezeshwa: Wanafunzi Wanasheherekea Jukwaa Lao",
+                articleMeta: "Na Timu ya Sauti.Market | Iliyochapishwa Julai 18, 2025",
+                paragraph1: "Wanafunzi walioshiriki katika programu ya Sauti.Market wamejaa fahari na shukrani. Kwa wengi, hii ni mara ya kwanza sauti zao zimesikilizwa na kuthaminiwa kweli. Jukwaa limewapa ujasiri wa kuzungumza, kushiriki hadithi zao, na kujua kwamba mitazamo yao ina maana.",
+                heading1: "Jukwaa Linalotambua Thamani",
+                paragraph2: "Sauti.Market ni zaidi ya mradi tu—ni harakati inayotambua thamani ya dhahabu ya sauti za vijana. Wanafunzi wanathamini jinsi jukwaa haliwaskilizi tu bali pia linawapa uwezo wa kuwa viongozi na waanzilishi wa mabadiliko katika jamii zao. Wanajisikia kutambuliwa, kuheshimiwa, na kuhamasika kuleta mabadiliko.",
+                heading2: "Uwezeshaji na Shukrani",
+                paragraph3: "Kupitia warsha, vipindi vya redio, na ushiriki wa jamii, wanafunzi wamegundua nguvu mpya ndani yao. Wanashukuru kwa fursa za kueleza mawazo yao na kuwa sehemu ya kitu kikubwa zaidi. Hisia ya kuwezeshwa imewahamasisha kuota ndoto kubwa zaidi na kusaidiana.",
+                blockquote: "\"Tunajivunia kuwa sehemu ya Sauti.Market. Jukwaa hili linatuamini na linatupa ujasiri wa kutumia sauti zetu kwa manufaa. Tunajisikia kuthaminiwa na kuwezeshwa kuunda mabadiliko.\" - Mwanafunzi mmoja aliyeshiriki",
+                heading3: "Kuangalia Mbele",
+                paragraph4: "Shukrani ya wanafunzi kwa Sauti.Market inalingana na msisimko wao kwa ajili ya baadaye. Wako tayari kuendelea kutumia sauti zao, wakijua wana jukwaa linalowaunga mkono na kuwainua. Pamoja, wanajenga urithi wa vijana waliojawa na uwezo ambao wanatambua thamani ya hadithi zao wenyewe.",
+                backLink: "&larr; Rudi kwenye Jarida",
+                footerText: "&copy; 2025 Sauti.Market. Haki zote zimehifadhiwa."
+            }
+        };
+
+        const languageButtons = document.querySelectorAll('#lang-en, #lang-sw');
+
+        function setLanguage(lang) {
+            document.getElementById('page-title').innerText = translations[lang].pageTitle;
+            document.getElementById('nav-home').innerText = translations[lang].navHome;
+            document.getElementById('nav-magazine').innerText = translations[lang].navMagazine;
+            document.getElementById('nav-gallery').innerText = translations[lang].navGallery;
+            document.getElementById('nav-contact').innerText = translations[lang].navContact;
+            document.getElementById('article-tag').innerText = translations[lang].articleTag;
+            document.getElementById('article-title').innerText = translations[lang].articleTitle;
+            document.getElementById('article-meta').innerText = translations[lang].articleMeta;
+            document.getElementById('paragraph-1').innerText = translations[lang].paragraph1;
+            document.getElementById('heading-1').innerText = translations[lang].heading1;
+            document.getElementById('paragraph-2').innerText = translations[lang].paragraph2;
+            document.getElementById('heading-2').innerText = translations[lang].heading2;
+            document.getElementById('paragraph-3').innerText = translations[lang].paragraph3;
+            document.getElementById('blockquote').innerText = translations[lang].blockquote;
+            document.getElementById('heading-3').innerText = translations[lang].heading3;
+            document.getElementById('paragraph-4').innerText = translations[lang].paragraph4;
+            document.getElementById('back-link').innerHTML = translations[lang].backLink;
+            document.getElementById('footer-text').innerHTML = translations[lang].footerText;
+            
+            // Update button styles
+            languageButtons.forEach(button => {
+                button.classList.remove('text-yellow', 'text-white');
+                if (button.id === `lang-${lang}`) {
+                    button.classList.add('text-yellow');
+                } else {
+                    button.classList.add('text-white');
+                }
+            });
+        }
+        
+        // Set default language on page load
+        setLanguage('en');
+    </script>
+</body>
+</html>

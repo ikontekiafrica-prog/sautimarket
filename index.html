@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sauti.Market - Your Voice, Your Future</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Fonts from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@400;600&display=swap');
+        
+        .font-header {
+            font-family: 'Oswald', sans-serif;
+        }
+        .font-body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Custom Colors defined in the brand kit */
+        :root {
+            --color-indigo: #0D1B2A;
+            --color-yellow: #F4A300;
+            --color-white: #FFFFFF;
+            --color-gray: #EAEAEA;
+            --color-orange: #F46E00;
+        }
+        
+        .bg-indigo { background-color: var(--color-indigo); }
+        .bg-yellow { background-color: var(--color-yellow); }
+        .text-yellow { color: var(--color-yellow); }
+        .text-orange { color: var(--color-orange); }
+        .bg-gray { background-color: var(--color-gray); }
+        .bg-orange { background-color: var(--color-orange); }
+        .border-yellow { border-color: var(--color-yellow); }
+
+        /* Custom styles for the fading image slider */
+        .slider-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        
+        .slider-image.active {
+            opacity: 0.3; /* A fading background effect */
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-indigo text-white py-4 px-8 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="font-header text-3xl font-bold text-yellow uppercase">Sauti.Market</a>
+            
+            <!-- Mobile Menu Button - Visible on small screens, hidden on medium and larger -->
+            <button id="menu-button" class="md:hidden text-yellow hover:text-white transition-colors focus:outline-none">
+                <!-- Hamburger Icon -->
+                <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            
+            <!-- Navigation Menu - Hidden by default on mobile, flex on medium screens and up -->
+            <nav id="nav-menu" class="hidden md:flex flex-col md:flex-row items-center w-full md:w-auto mt-4 md:mt-0 space-y-4 md:space-y-0 text-center">
+                <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 w-full md:w-auto">
+                    <li><a href="#" class="text-white hover:text-yellow transition-colors font-bold" id="nav-home">Home</a></li>
+                    <li><a href="magazine.html" class="text-white hover:text-yellow transition-colors" id="nav-magazine">Magazine</a></li>
+                    <li><a href="gallery.html" class="text-white hover:text-yellow transition-colors" id="nav-gallery">Gallery</a></li>
+                    <li><a href="contact.html" class="text-white hover:text-yellow transition-colors" id="nav-contact">Contact Us</a></li>
+                </ul>
+                <!-- Language Switcher -->
+                <div class="lang-switcher ml-0 md:ml-4 mt-4 md:mt-0 border-t md:border-t-0 pt-4 md:pt-0 border-yellow-800">
+                    <button id="lang-en" class="font-bold text-yellow hover:text-white transition-colors" onclick="setLanguage('en')">EN</button>
+                    <span class="text-white">|</span>
+                    <button id="lang-sw" class="font-bold text-white hover:text-yellow transition-colors" onclick="setLanguage('sw')">SW</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Fading Image Slider -->
+    <section class="h-screen bg-indigo flex items-center justify-center text-center text-white p-4 relative overflow-hidden">
+        <!-- Image Slider Container -->
+        <div id="slider-container" class="absolute inset-0 z-0">
+            <!-- Images will be injected here by JavaScript -->
+        </div>
+        
+        <div class="relative z-10 max-w-4xl">
+            <h1 class="font-header text-5xl md:text-7xl font-bold leading-tight uppercase" id="hero-title">
+                Every Voice Is a Bridge to Opportunityyyyy.
+            </h1>
+            <p class="mt-4 text-lg md:text-xl font-light" id="hero-subtitle">
+                The movement empowering youth through voice, creativity, and financial literacy.
+            </p>
+            <a href="contact.html" class="mt-8 inline-block bg-yellow text-indigo font-bold text-lg px-8 py-4 rounded-full transition-transform transform hover:scale-105" id="hero-cta">
+                Join the Movement
+            </a>
+        </div>
+    </section>
+
+    <!-- Quick Stats & Impact Strip -->
+    <section class="bg-gray py-8 overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-around items-center text-center font-header text-indigo text-2xl md:text-3xl">
+                <div class="p-4" id="stat-1">42 Voices Amplified</div>
+                <div class="p-4" id="stat-2">5+ Supporters</div>
+                <div class="p-4" id="stat-3">3M+ TZS in Prizes</div>
+                <div class="p-4" id="stat-4">1 Mission</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story (Scroll Narrative) -->
+    <section class="py-20 px-4 bg-white">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="font-header text-4xl md:text-5xl text-indigo text-center font-bold mb-12" id="story-title">
+                From Silence to Sauti
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="md:sticky md:top-20">
+                    <!-- Image with fallbacks. Note: The URL is just an example. -->
+                    <img src="sliders/5.jpg" onerror="this.onerror=null;this.src='https://placehold.co/1200x800/d3d3d3/ffffff?text=Story+Image+Placeholder';" alt="Youth sharing a story" class="rounded-lg shadow-lg">
+                </div>
+                <div>
+                    <div class="space-y-12 text-lg font-light max-w-xl mx-auto">
+
+                    <p id="story-p1">
+                        In the heart of a quiet village, lived Amani, a young woman whose voice had always been drowned out by the noise of doubt and fear. She carried stories of hardship and dreams of change deep within her, but years of silence made her believe no one would listen. Then, one evening, in a small gathering under a starlit sky, Amani took a breath and shared her truth. Her voice, trembling at first, grew stronger with each word — painting vivid pictures of struggle, hope, and resilience. As she spoke, the listeners were drawn in, their hearts opening to the raw honesty she offered.
+                    </p>
+
+                    <p id="story-p2" style="display:none;">
+                        That night marked a turning point. Her story echoed through the village, awakening long-suppressed courage in others. People began to gather, inspired not only by her words but by the courage behind them. Mothers, fathers, and children who had lost hope started to believe that change was possible. They found strength in her vulnerability and began to speak their own truths. Amani's voice became a beacon — a symbol of bravery that ignited a ripple of transformation.
+                    </p>
+
+                    <p id="story-p3" style="display:none;">
+                        But the impact didn’t stop there. Stories of Amani’s courage traveled beyond the village boundaries, crossing towns and cities, reaching ears that longed for inspiration. People started to share their own voices, breaking free from silence and fear. Communities began to unite, driven by a newfound motivation to act and support one another. Barriers shattered as empathy grew, and what once seemed impossible became a shared mission. Amani’s simple act of sharing reminded the world that every voice matters, and sometimes, one story is all it takes to reshape the future.
+                    </p>
+
+                    <p id="story-p4" style="display:none;">
+                        This is the power of human voice — a force that can break chains, heal wounds, and build bridges where none existed before. It teaches us that courage is contagious, motivation is born from connection, and change begins with the decision to be heard. Through her story, Amani gave thousands the permission to speak, to dream, and to believe. And in that, she changed lives forever.
+                    </p>
+
+                    <button id="readMoreBtn" 
+                        style="background:#2563eb; color:#fff; padding:0.5rem 1.2rem; border:none; border-radius:0.375rem; cursor:pointer; font-weight:600; transition: background 0.3s;">
+                        Read More
+                    </button>
+                    </div>
+
+                    <script>
+                    const btn = document.getElementById('readMoreBtn');
+                    const paras = [
+                        document.getElementById('story-p2'),
+                        document.getElementById('story-p3'),
+                        document.getElementById('story-p4')
+                    ];
+
+                    btn.addEventListener('click', () => {
+                        if (paras[0].style.display === 'none') {
+                        paras.forEach(p => p.style.display = 'block');
+                        btn.textContent = 'Read Less';
+                        } else {
+                        paras.forEach(p => p.style.display = 'none');
+                        btn.textContent = 'Read More';
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    });
+                    </script>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Spotlight -->
+    <section class="py-20 px-4 bg-gray">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="font-header text-4xl md:text-5xl text-indigo text-center font-bold mb-12" id="challenges-title">
+                Join a Challenge. Find Your Voice.
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Sauti Challenge 2025 Card -->
+                <div class="bg-white rounded-xl shadow-lg p-8 transform transition-transform hover:scale-105 duration-300">
+                    <span class="inline-block bg-orange text-white text-xs font-bold px-3 py-1 rounded-full uppercase mb-4" id="challenge-type-1">
+                        Sauti Challenge
+                    </span>
+                    <h3 class="font-header text-3xl font-bold text-indigo" id="challenge-title-1">Sauti Challenge 2025</h3>
+                    <p class="mt-4 text-lg font-light" id="challenge-desc-1">
+                        This is your stage. An open competition for youth singers and performers. Share your talent, connect with a community, and compete for life-changing prizes.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-gray-600">
+                        <li id="challenge-li-1a">Who it's for: All youth talents</li>
+                        <li id="challenge-li-1b">Prizes: 3M+ TZS in prizes</li>
+                        <li id="challenge-li-1c">How to join: Simple online application</li>
+                    </ul>
+                    <a href="#register" class="mt-8 inline-block bg-indigo text-white font-bold text-lg px-6 py-3 rounded-full" id="challenge-cta-1">
+                        Apply Now
+                    </a>
+                </div>
+
+                <!-- #Back2Impact Card -->
+                <div class="bg-white rounded-xl shadow-lg p-8 transform transition-transform hover:scale-105 duration-300">
+                    <span class="inline-block bg-indigo text-white text-xs font-bold px-3 py-1 rounded-full uppercase mb-4" id="challenge-type-2">
+                        Back2Impact
+                    </span>
+                    <h3 class="font-header text-3xl font-bold text-indigo" id="challenge-title-2">#Back2Impact</h3>
+                    <p class="mt-4 text-lg font-light" id="challenge-desc-2">
+                        A movement for secondary school students. Turn your creative voice—storytelling, radio hosting, spoken word—into a tool for financial literacy and social impact.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-gray-600">
+                        <li id="challenge-li-2a">Who it's for: Secondary school students</li>
+                        <li id="challenge-li-2b">Focus: Financial literacy & content creation</li>
+                        <li id="challenge-li-2c">Prizes: School-based prizes & mentorship</li>
+                    </ul>
+                    <a href="#register" class="mt-8 inline-block bg-yellow text-indigo font-bold text-lg px-6 py-3 rounded-full" id="challenge-cta-2">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer placeholder -->
+    <footer class="bg-indigo text-white py-12 text-center">
+        <p class="font-body text-sm">&copy; 2025 Sauti.Market. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts for Language Switcher and Mobile Menu & Slider -->
+    <script>
+        const translations = {
+            en: {
+                navHome: "Home",
+                navMagazine: "Magazine",
+                navGallery: "Gallery",
+                navContact: "Contact Us",
+                heroTitle: "Every Voice Is a Bridge to Opportunity.",
+                heroSubtitle: "A movement empowering youth through voice, creativity, and financial literacy.",
+                heroCta: "Join the Movement",
+                stat1: "42 Voices Amplified",
+                stat2: "5+ Supporters",
+                stat3: "3M+ TZS in Prizes",
+                stat4: "1 Mission",
+                storyTitle: "From Silence to Sauti",
+                storyP1: "In the heart of a quiet village, lived Amani, a young woman whose voice had always been drowned out by the noise of doubt and fear. She carried stories of hardship and dreams of change deep within her, but years of silence made her believe no one would listen. Then, one evening, in a small gathering under a starlit sky, Amani took a breath and shared her truth. Her voice, trembling at first, grew stronger with each word — painting vivid pictures of struggle, hope, and resilience. As she spoke, the listeners were drawn in, their hearts opening to the raw honesty she offered.",
+                storyP2: "That night marked a turning point. Her story echoed through the village, awakening long-suppressed courage in others. People began to gather, inspired not only by her words but by the courage behind them. Mothers, fathers, and children who had lost hope started to believe that change was possible. They found strength in her vulnerability and began to speak their own truths. Amani's voice became a beacon — a symbol of bravery that ignited a ripple of transformation.",
+                storyP3: "But the impact didn’t stop there. Stories of Amani’s courage traveled beyond the village boundaries, crossing towns and cities, reaching ears that longed for inspiration. People started to share their own voices, breaking free from silence and fear. Communities began to unite, driven by a newfound motivation to act and support one another. Barriers shattered as empathy grew, and what once seemed impossible became a shared mission. Amani’s simple act of sharing reminded the world that every voice matters, and sometimes, one story is all it takes to reshape the future.",
+                storyP4: "This is the power of human voice — a force that can break chains, heal wounds, and build bridges where none existed before. It teaches us that courage is contagious, motivation is born from connection, and change begins with the decision to be heard. Through her story, Amani gave thousands the permission to speak, to dream, and to believe. And in that, she changed lives forever.",
+                challengesTitle: "Join a Challenge. Find Your Voice.",
+                challengeType1: "Sauti Challenge",
+                challengeTitle1: "Sauti Challenge 2025",
+                challengeDesc1: "This is your stage. An open competition for youth singers and performers. Share your talent, connect with a community, and compete for life-changing prizes.",
+                challengeLi1a: "Who it's for: All youth talents",
+                challengeLi1b: "Prizes: 3M+ TZS in prizes",
+                challengeLi1c: "How to join: Simple online application",
+                challengeCta1: "Apply Now",
+                challengeType2: "Back2Impact",
+                challengeTitle2: "#Back2Impact",
+                challengeDesc2: "A movement for secondary school students. Turn your creative voice—storytelling, radio hosting, spoken word—into a tool for financial literacy and social impact.",
+                challengeLi2a: "Who it's for: Secondary school students",
+                challengeLi2b: "Focus: Financial literacy & content creation",
+                challengeLi2c: "Prizes: School-based prizes & mentorship",
+                challengeCta2: "Get Started"
+            },
+            sw: {
+                navHome: "Nyumbani",
+                navMagazine: "Jarida",
+                navGallery: "Matunzio",
+                navContact: "Wasiliana Nasi",
+                heroTitle: "Kila Sauti ni Daraja la Fursa.",
+                heroSubtitle: "Harakati zinazowawezesha vijana kupitia sauti, ubunifu, na elimu ya kifedha.",
+                heroCta: "Jiunge na Harakati",
+                stat1: "Sauti 42 Zimeimarishwa",
+                stat2: "Wasaidizi 5+",
+                stat3: "Milioni 3+ TZS Katika Zawadi",
+                stat4: "Dhamira 1",
+                storyTitle: "Kutoka Ukimya hadi Sauti",
+                storyP1: "Katika moyo wa kijiji tulivu, aliishi Amani, mwanamke kijana ambaye sauti yake daima ilizikwa na kelele za shaka na hofu. Alibeba hadithi za shida na ndoto za mabadiliko ndani yake, lakini miaka ya ukimya ilimfanya aamini hakuna atakayesikiliza. Kisha, jioni moja, kwenye mkusanyiko mdogo chini ya anga iliyojaa nyota, Amani alipumua na kushiriki ukweli wake. Sauti yake, ikitetemeka mwanzoni, ilikua na nguvu kwa kila neno — ikichora picha wazi za mapambano, matumaini, na ustahimilivu. Alipokuwa akiongea, wasikilizaji walivutwa, mioyo yao ikifunguka kwa uaminifu wa kweli alioutoa.",
+                storyP2: "Usiku huo ulikuwa mabadiliko. Hadithi yake ilisikika kote kijijini, ikiamsha ujasiri uliokandamizwa kwa muda mrefu ndani ya wengine. Watu walianza kukusanyika, wakihamasishwa sio tu na maneno yake bali na ujasiri uliokuwa nyuma yao. Akina mama, akina baba, na watoto waliopoteza matumaini walianza kuamini kwamba mabadiliko yanawezekana. Walipata nguvu katika udhaifu wake na wakaanza kuzungumza ukweli wao wenyewe. Sauti ya Amani ikawa mwangaza — ishara ya ushujaa iliyowasha wimbi la mabadiliko.",
+                storyP3: "Lakini athari haikuishia hapo. Hadithi za ujasiri wa Amani zilisafiri nje ya mipaka ya kijiji, zikivuka miji na majiji, zikifika masikioni yaliyotamani msukumo. Watu walianza kushiriki sauti zao, wakikombolewa kutoka kwa ukimya na hofu. Jamii zilianza kuungana, zikiongozwa na motisha mpya ya kuchukua hatua na kusaidiana. Vizuizi vilivunjika huku huruma ikikua, na kile kilichoonekana kuwa hakiwezekani kiligeuka kuwa dhamira ya pamoja. Kitendo rahisi cha Amani cha kushiriki kiliukumbusha ulimwengu kuwa kila sauti ina thamani, na wakati mwingine, hadithi moja ndiyo inayohitajika kubadili mustakabali.",
+                storyP4: "Huu ndio uwezo wa sauti ya binadamu — nguvu inayoweza kuvunja minyororo, kuponya majeraha, na kujenga madaraja ambapo hakukuwa na kabla. Inatufundisha kuwa ujasiri unaambukiza, motisha inatokana na uhusiano, na mabadiliko huanza na uamuzi wa kusikilizwa. Kupitia hadithi yake, Amani aliwapa maelfu ruhusa ya kuzungumza, kuota, na kuamini. Na katika hilo, alibadilisha maisha milele.",
+                challengesTitle: "Jiunge na Changamoto. Tafuta Sauti Yako.",
+                challengeType1: "Changamoto ya Sauti",
+                challengeTitle1: "Changamoto ya Sauti 2025",
+                challengeDesc1: "Hili ni jukwaa lako. Shindano la wazi kwa waimbaji na waigizaji vijana. Shiriki talanta yako, ungana na jamii, na shindania zawadi zinazobadilisha maisha.",
+                challengeLi1a: "Kwa nani: Vijana wote wenye talanta",
+                challengeLi1b: "Zawadi: Zaidi ya TZS milioni 3",
+                challengeLi1c: "Jinsi ya kujiunga: Maombi rahisi ya mtandaoni",
+                challengeCta1: "Tuma Maombi Sasa",
+                challengeType2: "Rudi kwa Athari",
+                challengeTitle2: "#Rudi kwa Athari",
+                challengeDesc2: "Harakati kwa wanafunzi wa shule za sekondari. Tumia sauti yako ya ubunifu—kusimulia hadithi, utangazaji wa redio, mashairi ya kutamka—kama chombo cha elimu ya kifedha na athari ya kijamii.",
+                challengeLi2a: "Kwa nani: Wanafunzi wa shule za sekondari",
+                challengeLi2b: "Lengo: Elimu ya kifedha na uundaji wa maudhui",
+                challengeLi2c: "Zawadi: Zawadi za shule na ushauri",
+                challengeCta2: "Anza Sasa"
+            }
+        };
+
+        const languageButtons = document.querySelectorAll('#lang-en, #lang-sw');
+
+        function setLanguage(lang) {
+            document.getElementById('nav-home').innerText = translations[lang].navHome;
+            document.getElementById('nav-magazine').innerText = translations[lang].navMagazine;
+            document.getElementById('nav-gallery').innerText = translations[lang].navGallery;
+            document.getElementById('nav-contact').innerText = translations[lang].navContact;
+            document.getElementById('hero-title').innerText = translations[lang].heroTitle;
+            document.getElementById('hero-subtitle').innerText = translations[lang].heroSubtitle;
+            document.getElementById('hero-cta').innerText = translations[lang].heroCta;
+            document.getElementById('stat-1').innerText = translations[lang].stat1;
+            document.getElementById('stat-2').innerText = translations[lang].stat2;
+            document.getElementById('stat-3').innerText = translations[lang].stat3;
+            document.getElementById('stat-4').innerText = translations[lang].stat4;
+            document.getElementById('story-title').innerText = translations[lang].storyTitle;
+            document.getElementById('story-p1').innerText = translations[lang].storyP1;
+            document.getElementById('story-p2').innerText = translations[lang].storyP2;
+            document.getElementById('story-p3').innerText = translations[lang].storyP3;
+            document.getElementById('story-p4').innerText = translations[lang].storyP4;
+            document.getElementById('challenges-title').innerText = translations[lang].challengesTitle;
+            document.getElementById('challenge-type-1').innerText = translations[lang].challengeType1;
+            document.getElementById('challenge-title-1').innerText = translations[lang].challengeTitle1;
+            document.getElementById('challenge-desc-1').innerText = translations[lang].challengeDesc1;
+            document.getElementById('challenge-li-1a').innerText = translations[lang].challengeLi1a;
+            document.getElementById('challenge-li-1b').innerText = translations[lang].challengeLi1b;
+            document.getElementById('challenge-li-1c').innerText = translations[lang].challengeLi1c;
+            document.getElementById('challenge-cta-1').innerText = translations[lang].challengeCta1;
+            document.getElementById('challenge-type-2').innerText = translations[lang].challengeType2;
+            document.getElementById('challenge-title-2').innerText = translations[lang].challengeTitle2;
+            document.getElementById('challenge-desc-2').innerText = translations[lang].challengeDesc2;
+            document.getElementById('challenge-li-2a').innerText = translations[lang].challengeLi2a;
+            document.getElementById('challenge-li-2b').innerText = translations[lang].challengeLi2b;
+            document.getElementById('challenge-li-2c').innerText = translations[lang].challengeLi2c;
+            document.getElementById('challenge-cta-2').innerText = translations[lang].challengeCta2;
+
+            // Update button styles
+            languageButtons.forEach(button => {
+                button.classList.remove('text-yellow', 'text-white');
+                if (button.id === `lang-${lang}`) {
+                    button.classList.add('text-yellow');
+                } else {
+                    button.classList.add('text-white');
+                }
+            });
+
+            // Update document title
+            document.title = lang === 'sw' ? 'Sauti.Market - Sauti Yako, Baadaye Yako' : 'Sauti.Market - Your Voice, Your Future';
+        }
+
+        // Set default language on page load
+        setLanguage('en');
+
+        // Mobile menu functionality
+        const menuButton = document.getElementById('menu-button');
+        const navMenu = document.getElementById('nav-menu');
+        const openIcon = document.getElementById('menu-icon-open');
+        const closeIcon = document.getElementById('menu-icon-close');
+
+        menuButton.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+            openIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Image Slider functionality
+        const sliderContainer = document.getElementById('slider-container');
+        // Update these URLs to your actual image paths from the "sliders" folder
+        const images = [
+            'sliders/1.jpg',
+            'sliders/2.jpg',
+            'sliders/3.jpg',
+            'sliders/4.jpg',
+            'sliders/5.jpg',
+            'sliders/6.jpg',
+            'sliders/7.jpg',
+            'sliders/8.jpg',
+            'sliders/9.jpg',
+            'sliders/10.jpg',
+        ];
+        let currentImageIndex = 0;
+
+        // Preload images
+        images.forEach(imgUrl => {
+            const img = new Image();
+            img.src = imgUrl;
+        });
+
+        function createSliderImages() {
+            images.forEach((imgUrl, index) => {
+                const imgElement = document.createElement('img');
+                imgElement.src = imgUrl;
+                imgElement.classList.add('slider-image');
+                imgElement.alt = `Sauti.Market Hero Image ${index + 1}`;
+                sliderContainer.appendChild(imgElement);
+            });
+        }
+
+        function showNextImage() {
+            const allImages = document.querySelectorAll('.slider-image');
+            allImages[currentImageIndex].classList.remove('active');
+            
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            
+            allImages[currentImageIndex].classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            createSliderImages();
+            const allImages = document.querySelectorAll('.slider-image');
+            if (allImages.length > 0) {
+                allImages[0].classList.add('active');
+                setInterval(showNextImage, 5000); // Change image every 5 seconds
+            }
+        });
+    </script>
+</body>
+</html>

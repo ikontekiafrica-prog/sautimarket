@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Article: Finding My Sauti - Sauti.Market</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom Fonts from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@400;600&display=swap');
+        
+        .font-header {
+            font-family: 'Oswald', sans-serif;
+        }
+        .font-body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Custom Colors defined in the brand kit */
+        :root {
+            --color-indigo: #0D1B2A;
+            --color-yellow: #F4A300;
+            --color-white: #FFFFFF;
+            --color-gray: #EAEAEA;
+            --color-orange: #F46E00;
+        }
+        
+        .bg-indigo { background-color: var(--color-indigo); }
+        .bg-yellow { background-color: var(--color-yellow); }
+        .text-yellow { color: var(--color-yellow); }
+        .text-orange { color: var(--color-orange); }
+        .bg-gray { background-color: var(--color-gray); }
+        .bg-orange { background-color: var(--color-orange); }
+        .border-yellow { border-color: var(--color-yellow); }
+
+        /* A simple prose class for better readability within the article content */
+        .prose p {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="font-body bg-gray text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-indigo text-white py-4 px-8 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="font-header text-3xl font-bold text-yellow uppercase">Sauti.Market</a>
+            
+            <!-- Navigation Menu - Hidden by default on mobile, flex on medium screens and up -->
+            <nav id="nav-menu" class="hidden md:flex flex-col md:flex-row items-center w-full md:w-auto mt-4 md:mt-0 space-y-4 md:space-y-0 text-center">
+                <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 w-full md:w-auto">
+                    <li><a href="index.html" class="text-white hover:text-yellow transition-colors font-bold" id="nav-home">Home</a></li>
+                    <li><a href="magazine.html" class="text-white hover:text-yellow transition-colors" id="nav-magazine">Magazine</a></li>
+                    <li><a href="gallery.html" class="text-white hover:text-yellow transition-colors" id="nav-gallery">Gallery</a></li>
+                    <li><a href="contact.html" class="text-white hover:text-yellow transition-colors" id="nav-contact">Contact Us</a></li>
+                </ul>
+                <!-- Language Switcher -->
+                <div class="lang-switcher ml-0 md:ml-4 mt-4 md:mt-0 border-t md:border-t-0 pt-4 md:pt-0 border-yellow-800">
+                    <button id="lang-en" class="font-bold text-yellow hover:text-white transition-colors" onclick="setLanguage('en')">EN</button>
+                    <span class="text-white">|</span>
+                    <button id="lang-sw" class="font-bold text-white hover:text-yellow transition-colors" onclick="setLanguage('sw')">SW</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <main class="py-16 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <!-- Hero Image -->
+            <img src="images/5.jpg" alt="Article Hero Image" class="w-full rounded-xl shadow-lg mb-8">
+            
+            <div class="bg-white rounded-xl shadow-lg p-8 md:p-12">
+                <span class="inline-block text-orange text-sm font-bold mb-2" id="article-tag">
+                    Interview
+                </span>
+                <h1 class="font-header text-4xl md:text-5xl font-bold text-indigo leading-tight" id="article-title">
+                    "Finding My Sauti": The Journey of Our 2025 Challenge Winner
+                </h1>
+                <p class="text-gray-500 mt-2 text-lg" id="article-meta">
+                    By The Sauti.Market Team | Published on July 18, 2025
+                </p>
+
+                <div class="mt-8 prose max-w-none">
+                    <p id="paragraph-1">
+                        In a nation brimming with undiscovered talent, the Sauti Challenge stands as a beacon for young artists. This year, one voice rose above the rest—a voice that tells a story of passion, perseverance, and the power of finding your platform. We sat down with Meherleen S. Abas, the grand prize winner of the Sauti Challenge 2025, to delve into her journey from a quiet observer to a national sensation.
+                    </p>
+
+                    <h2 class="font-header text-3xl font-bold text-indigo mt-10" id="heading-1">From a Small Town to the National Stage</h2>
+                    <p id="paragraph-2">
+                        Meherleen, a 19-year-old from the heart of Tanzania, shared her humble beginnings. "I always loved to sing, but it was just for myself, or maybe for a few friends at a local gathering," she recounts. "The idea of performing in front of judges, let alone a national audience, felt like a distant dream." It was her younger brother who convinced her to submit an entry to the Sauti Challenge after seeing the online promotions. "He showed me a poster on Instagram, and he told me, 'This is not just for music, this is for your voice.' That's when I knew I had to try."
+                    </p>
+
+                    <h2 class="font-header text-3xl font-bold text-indigo mt-10" id="heading-2">More Than Just a Competition</h2>
+                    <p id="paragraph-3">
+                        The Sauti Challenge isn't just about winning. According to Meherleen, the real prize was the experience itself. "The mentorship sessions were life-changing. We learned about vocal techniques, but also about financial literacy—how to manage prize money, how to invest in our future, and how to see our talent as a real business." These insights, she believes, are what truly empower young people.
+                    </p>
+
+                    <blockquote class="border-l-4 border-yellow pl-4 text-xl italic my-8" id="blockquote">
+                        "The Sauti Challenge showed me that my voice is not just for singing. It's a tool for opportunity, a way to build a future for myself and my family."
+                    </blockquote>
+
+                    <h2 class="font-header text-3xl font-bold text-indigo mt-10" id="heading-3">What's Next for Meherleen?</h2>
+                    <p id="paragraph-4">
+                        With the prize money, Meherleen plans to record her first album and start a small business. She also hopes to become a mentor for the next generation of Sauti.Market contestants. Her advice to other aspiring artists is simple: "Your voice is your most powerful tool. Don't be afraid to use it. The Sauti.Market platform is a safe space to grow, learn, and be heard."
+                    </p>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="magazine.html" class="inline-block bg-indigo text-white font-bold text-lg px-8 py-4 rounded-full transition-transform transform hover:scale-105" id="back-link">
+                        &larr; Back to Voices of Impact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer placeholder -->
+    <footer class="bg-indigo text-white py-12 text-center mt-16">
+        <p class="font-body text-sm" id="footer-text">&copy; 2025 Sauti.Market. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                pageTitle: "Article: Finding My Sauti - Sauti.Market",
+                navHome: "Home",
+                navMagazine: "Magazine",
+                navGallery: "Gallery",
+                navContact: "Contact Us",
+                articleTag: "Interview",
+                articleTitle: "\"Finding My Sauti\": The Journey of Our 2025 Challenge Winner",
+                articleMeta: "By The Sauti.Market Team | Published on July                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  x 15, 2025",
+                paragraph1: "In a nation brimming with undiscovered talent, the Sauti Challenge stands as a beacon for young artists. This year, one voice rose above the rest—a voice that tells a story of passion, perseverance, and the power of finding your platform. We sat down with Meherleen S. Abas, the grand prize winner of the Sauti Challenge 2025, to delve into her journey from a quiet observer to a national sensation.",
+                heading1: "From a Small Town to the National Stage",
+                paragraph2: "Meherleen, a 19-year-old from the heart of Tanzania, shared her humble beginnings. \"I always loved to sing, but it was just for myself, or maybe for a few friends at a local gathering,\" she recounts. \"The idea of performing in front of judges, let alone a national audience, felt like a distant dream.\" It was her younger brother who convinced her to submit an entry to the Sauti Challenge after seeing the online promotions. \"He showed me a poster on Instagram, and he told me, 'This is not just for music, this is for your voice.' That's when I knew I had to try.\"",
+                heading2: "More Than Just a Competition",
+                paragraph3: "The Sauti Challenge isn't just about winning. According to Meherleen, the real prize was the experience itself. \"The mentorship sessions were life-changing. We learned about vocal techniques, but also about financial literacy—how to manage prize money, how to invest in our future, and how to see our talent as a real business.\" These insights, she believes, are what truly empower young people.",
+                blockquote: "\"The Sauti Challenge showed me that my voice is not just for singing. It's a tool for opportunity, a way to build a future for myself and my family.\"",
+                heading3: "What's Next for Meherleen?",
+                paragraph4: "With the prize money, Meherleen plans to record her first album and start a small business. She also hopes to become a mentor for the next generation of Sauti.Market contestants. Her advice to other aspiring artists is simple: \"Your voice is your most powerful tool. Don't be afraid to use it. The Sauti.Market platform is a safe space to grow, learn, and be heard.\"",
+                backLink: "&larr; Back to Voices of Impact",
+                footerText: "&copy; 2025 Sauti.Market. All rights reserved."
+            },
+            sw: {
+                pageTitle: "Makala: Kutafuta Sauti Yangu - Sauti.Market",
+                navHome: "Nyumbani",
+                navMagazine: "Jarida",
+                navGallery: "Matunzio",
+                navContact: "Wasiliana Nasi",
+                articleTag: "Mahojiano",
+                articleTitle: "\"Kutafuta Sauti Yangu\": Safari ya Mshindi Wetu wa Changamoto 2025",
+                articleMeta: "Na Timu ya Sauti.Market | Iliyochapishwa Julai 18, 2025",
+                paragraph1: "Katika taifa lililojaa vipaji visivyogunduliwa, Changamoto ya Sauti inasimama kama mwanga kwa wasanii wachanga. Mwaka huu, sauti moja ilipanda juu ya nyingine—sauti inayosimulia hadithi ya shauku, uvumilivu, na nguvu ya kupata jukwaa lako. Tulikaa na Meherleen S. Abas, mshindi mkuu wa Changamoto ya Sauti 2025, ili kuchunguza safari yake kutoka kuwa mwangalizi tulivu hadi kuwa mrembo wa kitaifa.",
+                heading1: "Kutoka Mji Mdogo hadi Jukwaa la Kitaifa",
+                paragraph2: "Meherleen, mwenye umri wa miaka 19 kutoka moyo wa Tanzania, alishiriki mwanzo wake mnyenyekevu. \"Daima nilipenda kuimba, lakini ilikuwa kwa ajili yangu tu, au labda kwa marafiki wachache katika mkusanyiko wa ndani,\" anasimulia. \"Wazo la kutumbuiza mbele ya majaji, achilia mbali watazamaji wa kitaifa, lilihisi kama ndoto ya mbali.\" Alikuwa ndugu yake mdogo aliyemshawishi kuwasilisha ombi kwenye Changamoto ya Sauti baada ya kuona matangazo ya mtandaoni. \"Alinionyesha bango kwenye Instagram, na akaniambia, 'Hii si kwa ajili ya muziki tu, hii ni kwa ajili ya sauti yako.' Hapo ndipo nilijua kwamba lazima nijaribu.\"",
+                heading2: "Zaidi ya Ushindani Tu",
+                paragraph3: "Changamoto ya Sauti si tu kuhusu kushinda. Kulingana na Meherleen, tuzo halisi ilikuwa uzoefu wenyewe. \"Vipindi vya ushauri vilikuwa vya kubadilisha maisha. Tulijifunza kuhusu mbinu za sauti, lakini pia kuhusu elimu ya kifedha—jinsi ya kusimamia pesa ya tuzo, jinsi ya kuwekeza katika mustakabali wetu, na jinsi ya kuona kipaji chetu kama biashara halisi.\" Anaamini kwamba maarifa haya ndiyo yanayowapa vijana nguvu kweli.",
+                blockquote: "\"Changamoto ya Sauti ilinionyesha kuwa sauti yangu si tu kwa ajili ya kuimba. Ni chombo cha fursa, njia ya kujenga mustakabali kwa ajili yangu mwenyewe na familia yangu.\"",
+                heading3: "Nini Kinafuata kwa Meherleen?",
+                paragraph4: "Kwa pesa ya tuzo, Meherleen anapanga kurekodi albamu yake ya kwanza na kuanzisha biashara ndogo. Pia anatumaini kuwa mshauri kwa kizazi kijacho cha washiriki wa Sauti.Market. Ushauri wake kwa wasanii wengine wachanga ni rahisi: \"Sauti yako ni chombo chako chenye nguvu zaidi. Usiogope kuitumia. Jukwaa la Sauti.Market ni nafasi salama ya kukua, kujifunza, na kusikilizwa.\"",
+                backLink: "&larr; Rudi kwenye Sauti Zenye Athari",
+                footerText: "&copy; 2025 Sauti.Market. Haki zote zimehifadhiwa."
+            }
+        };
+
+        const languageButtons = document.querySelectorAll('#lang-en, #lang-sw');
+
+        function setLanguage(lang) {
+            document.getElementById('page-title').innerText = translations[lang].pageTitle;
+            document.getElementById('nav-home').innerText = translations[lang].navHome;
+            document.getElementById('nav-magazine').innerText = translations[lang].navMagazine;
+            document.getElementById('nav-gallery').innerText = translations[lang].navGallery;
+            document.getElementById('nav-contact').innerText = translations[lang].navContact;
+            document.getElementById('article-tag').innerText = translations[lang].articleTag;
+            document.getElementById('article-title').innerText = translations[lang].articleTitle;
+            document.getElementById('article-meta').innerText = translations[lang].articleMeta;
+            document.getElementById('paragraph-1').innerText = translations[lang].paragraph1;
+            document.getElementById('heading-1').innerText = translations[lang].heading1;
+            document.getElementById('paragraph-2').innerText = translations[lang].paragraph2;
+            document.getElementById('heading-2').innerText = translations[lang].heading2;
+            document.getElementById('paragraph-3').innerText = translations[lang].paragraph3;
+            document.getElementById('blockquote').innerText = translations[lang].blockquote;
+            document.getElementById('heading-3').innerText = translations[lang].heading3;
+            document.getElementById('paragraph-4').innerText = translations[lang].paragraph4;
+            document.getElementById('back-link').innerHTML = translations[lang].backLink;
+            document.getElementById('footer-text').innerHTML = translations[lang].footerText;
+            
+            // Update button styles
+            languageButtons.forEach(button => {
+                button.classList.remove('text-yellow', 'text-white');
+                if (button.id === `lang-${lang}`) {
+                    button.classList.add('text-yellow');
+                } else {
+                    button.classList.add('text-white');
+                }
+            });
+        }
+        
+        // Set default language on page load
+        setLanguage('en');
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* Custom Fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@400;600&display=swap');
+        
+/* Custom Colors defined in the brand kit */
+:root {
+    --color-indigo: #0D1B2A;
+    --color-yellow: #F4A300;
+    --color-white: #FFFFFF;
+    --color-gray: #EAEAEA;
+    --color-orange: #F46E00;
+}
+        
+/* Tailwind-like utility classes using custom colors */
+.bg-indigo { background-color: var(--color-indigo); }
+.bg-yellow { background-color: var(--color-yellow); }
+.text-yellow { color: var(--color-yellow); }
+.text-orange { color: var(--color-orange); }
+.bg-gray { background-color: var(--color-gray); }
+.bg-orange { background-color: var(--color-orange); }
+.border-yellow { border-color: var(--color-yellow); }
+
+/* Custom font classes for the entire page */
+.font-header {
+    font-family: 'Oswald', sans-serif;
+}
+.font-body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Responsive Header & Navigation --- */
+
+/* Base styles for the header and navigation menu */
+.header {
+    position: relative;
+    z-index: 50; /* Ensure header is on top */
+}
+
+/* Base styles for the navigation links container */
+#nav-menu {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Styles for the mobile menu button (SVG icons) */
+#menu-button {
+    cursor: pointer;
+}
+
+/* Mobile-specific styles - applies when screen is 767px or smaller */
+@media (max-width: 767px) {
+    .container {
+        flex-wrap: wrap; /* Allow items to wrap */
+    }
+
+    /* Style for the navigation menu when it's open on mobile */
+    #nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+        background-color: var(--color-indigo); /* Background for the mobile menu */
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1rem 0;
+    }
+
+    /* Style the list of links inside the mobile menu */
+    #nav-menu ul {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    /* Style for each list item in the mobile menu */
+    #nav-menu ul li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    #nav-menu ul li:last-child {
+        border-bottom: none;
+    }
+
+    /* Style for the language switcher in the mobile menu */
+    .lang-switcher {
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 1rem;
+    }
+}
